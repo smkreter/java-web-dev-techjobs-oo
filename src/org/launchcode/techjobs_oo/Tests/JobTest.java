@@ -81,7 +81,16 @@ public class JobTest {
         assertFalse(firstIdenticalJob.equals(secondIdenticalJob));
     }
 
-
+    @Test
+    public void testToString(){
+        //should return a string that contains a blank line before and after the job information
+        Job stringJob = new Job("String Attacker", new Employer( "Me"), new Location("My office"), new PositionType("Cat"), new CoreCompetency("Clawing"));
+//        System.out.println(stringJob.toString().toCharArray());
+//        System.out.println(stringJob.toString().toCharArray()[0]);
+//        System.out.println("thisisastring".toCharArray()[2]);
+        assertEquals(stringJob.toString().toCharArray()[0], "\n".toCharArray()[0]);
+        assertEquals(stringJob.toString().toCharArray()[(stringJob.toString().toCharArray().length)-1], "\n".toCharArray()[0]);
+    }
 
 
 

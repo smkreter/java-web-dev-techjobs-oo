@@ -30,7 +30,11 @@ public class Job {
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
     }
-
+    // Custom toString for Job class
+    @Override
+    public String toString() {
+        return "\n" + this.name + "\n";
+    }
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
