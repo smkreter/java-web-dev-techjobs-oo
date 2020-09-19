@@ -3,7 +3,7 @@ package org.launchcode.techjobs_oo.Tests;
 import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.techjobs_oo.*;
-import org.junit.Before;
+
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -16,29 +16,42 @@ public class JobTest {
     }
 
     @Before
-    public void createTestObjects() {
-
-        Employer boeing = new Employer("Boeing");
-        Employer monsanto = new Employer("Bayer");
-        Location stLouis = new Location("St. Louis");
-        Location chicago = new Location("Chicago");
-        CoreCompetency busyWork = new CoreCompetency("Busy Work");
-        CoreCompetency projectManagement = new CoreCompetency("Project Management");
-        PositionType workerBee = new PositionType("Worker Bee");
-        PositionType projectManager = new PositionType("Project Manager");
-        Job testJob1 = new Job("Thing Doer II", boeing, stLouis, workerBee, busyWork);
-        Job testJob2 = new Job("Project Manager III", monsanto, chicago, projectManager, projectManagement);
-
+    public void createTestObject1() {
+//        Employer boeing = new Employer("Boeing");
+//        Location stLouis = new Location("St. Louis");
+//        CoreCompetency busyWork = new CoreCompetency("Busy Work");
+//        PositionType workerBee = new PositionType("Worker Bee");
+//        Job firstTestJob = new Job("Thing Doer II", boeing, stLouis, workerBee, busyWork);
     }
 
-
-
+    @Before
+    public void createTestObject2() {
+        Employer monsanto = new Employer("Bayer");
+        Location chicago = new Location("Chicago");
+        CoreCompetency projectManagement = new CoreCompetency("Project Management");
+        PositionType projectManager = new PositionType("Project Manager");
+        Job testJob2 = new Job("Project Manager III", monsanto, chicago, projectManager, projectManagement);
+//        return testJob2;
+    }
 
     @Test
     public void testSettingJobId(){
-        assertNotEquals(testJob1.getId(), null);
+        Employer boeing = new Employer("Boeing");
+        Location stLouis = new Location("St. Louis");
+        CoreCompetency busyWork = new CoreCompetency("Busy Work");
+        PositionType workerBee = new PositionType("Worker Bee");
+        Job firstTestJob = new Job("Thing Doer II", boeing, stLouis, workerBee, busyWork);
+        assertNotEquals(firstTestJob.getId(), null);
     }
+
+
 
 
 
 }
+
+
+
+
+
+
