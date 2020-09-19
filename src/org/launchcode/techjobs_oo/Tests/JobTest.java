@@ -88,11 +88,28 @@ public class JobTest {
 //        System.out.println(stringJob.toString().toCharArray());
 //        System.out.println(stringJob.toString().toCharArray()[0]);
 //        System.out.println("thisisastring".toCharArray()[2]);
+        System.out.println(stringJob.toString());
         assertEquals(stringJob.toString().toCharArray()[0], "\n".toCharArray()[0]);
         assertEquals(stringJob.toString().toCharArray()[(stringJob.toString().toCharArray().length)-1], "\n".toCharArray()[0]);
+        //should have a label for each field
+        //I'm defining a label as a thing with a colon and a space.
+        //There should be n things with colons and spaces, where n is the number of values in the class, which is 6
+        //should have each piece of info on its own line
+        // therefore should have n+1 line breaks, where n is number of values in the class, which is 6
+        char[] stringJobCharArray = stringJob.toString().toCharArray();
+        int breakCounter = 0;
+        int colonSpaceCounter = 0;
+        for (int i = 0; i < stringJobCharArray.length; i++) {
+            if (stringJobCharArray[i] == "\n".toCharArray()[0]) {
+                breakCounter++;
+            }
+            if ((stringJobCharArray[i] == ":".toCharArray()[0]) && (stringJobCharArray[i+1] == " ".toCharArray()[0])) {
+                colonSpaceCounter++;
+            }
+        }
+        assertEquals(breakCounter, 7);
+        assertEquals(colonSpaceCounter, 6);
     }
-
-
 
 }
 
