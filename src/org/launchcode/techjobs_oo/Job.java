@@ -30,16 +30,45 @@ public class Job {
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
     }
+
+    public Job(String name, Employer employer, Location location, PositionType positionType) {
+        this();
+        this.name = name;
+        this.employer = employer;
+        this.location = location;
+        this.positionType = positionType;
+    }
+
+    public Job(String name, Employer employer, Location location) {
+        this();
+        this.name = name;
+        this.employer = employer;
+        this.location = location;
+    }
+
+    public Job(String name, Employer employer) {
+        this();
+        this.name = name;
+        this.employer = employer;
+    }
+
+    public Job(String name) {
+        this();
+        this.name = name;
+    }
+
+
+
     // Custom toString for Job class
     @Override
     public String toString() {
         return "\n" +
                 "ID: " +this.id +"\n" +
                 "Name: " +this.name +"\n" +
-                "Employer: " +this.employer +"\n" +
-                "Location: " +this.location+"\n" +
-                "Position Type: " +this.positionType+"\n" +
-                "Core Competency: " + this.coreCompetency+
+                "Employer: " +this.employer +"\n" + this.employer.checkNull() +
+                "Location: " +this.location+"\n" + this.location.checkNull() +
+                "Position Type: " +this.positionType+"\n" + this.positionType.checkNull() +
+                "Core Competency: " + this.coreCompetency+ this.coreCompetency.checkNull() +
                 "\n";
     }
 

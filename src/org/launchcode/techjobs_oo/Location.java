@@ -56,4 +56,12 @@ public class Location {
     public void setValue(String value) {
         this.value = value;
     }
+
+    public String checkNull() {
+        if (this.value == null) {
+            return "Data not available";
+        } else return "";
+    }
+
+
 }
