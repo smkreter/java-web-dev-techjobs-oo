@@ -64,11 +64,19 @@ public class Job {
     public String toString() {
         return "\n" +
                 "ID: " +this.id +"\n" +
-                "Name: " +this.name +"\n" +
-                "Employer: " +this.employer +"\n" + this.employer.checkNull() +
-                "Location: " +this.location+"\n" + this.location.checkNull() +
-                "Position Type: " +this.positionType+"\n" + this.positionType.checkNull() +
-                "Core Competency: " + this.coreCompetency+ this.coreCompetency.checkNull() +
+                "Name: " +this.name + "\n" +
+                "Employer: " + this.employer.toString() + "\n" +
+                "Location: " + this.location.toString() + "\n" +
+                "Position Type: " + this.positionType.toString() + "\n" +
+                "Core Competency: " + this.coreCompetency.toString() +
+//                "Employer: " + if(this.employer.checkNull()) {
+//                    + "Data not available"
+//                        }else{
+//                    + this.employer + "\n" +
+////                "Employer: " +this.employer +"\n" + this.employer.checkNull() +
+////                "Location: " +this.location+"\n" + this.location.checkNull() +
+////                "Position Type: " +this.positionType+"\n" + this.positionType.checkNull() +
+////                "Core Competency: " + this.coreCompetency+ this.coreCompetency.checkNull() +
                 "\n";
     }
 

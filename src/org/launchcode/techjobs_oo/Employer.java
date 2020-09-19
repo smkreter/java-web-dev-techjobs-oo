@@ -21,6 +21,9 @@ public class Employer {
 
     @Override
     public String toString() {
+        if (this.checkNull()) {
+            return "Data not available";
+        }
         return value;
     }
 
@@ -51,10 +54,9 @@ public class Employer {
         this.value = value;
     }
 
-    public String checkNull() {
+    public boolean checkNull() {
         if (this.value == null) {
-            return "Data not available";
-        } else return "";
+            return true;
+        } else return false;
     }
-
 }

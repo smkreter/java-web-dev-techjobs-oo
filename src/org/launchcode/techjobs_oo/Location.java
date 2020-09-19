@@ -27,7 +27,10 @@ public class Location {
 
     @Override
     public String toString() {
-        return value;
+        if (this.checkNull()) {
+            return "Data not available";
+        }
+        else return value;
     }
 
     @Override
@@ -57,10 +60,10 @@ public class Location {
         this.value = value;
     }
 
-    public String checkNull() {
+    public boolean checkNull() {
         if (this.value == null) {
-            return "Data not available";
-        } else return "";
+            return true;
+        } else return false;
     }
 
 
