@@ -61,19 +61,24 @@ public class JobTest {
     @Test
     public void testJobConstructorSetsAllFields() {
         Job productTester = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-//        assertEquals(productTester.getCoreCompetency().getClass(), CoreCompetency);
-//        assertEquals(productTester.getEmployer().getClass(), Employer);
-//        assertEquals(productTester.getLocation().getClass(), Location);
-//        assertEquals(productTester.getPositionType().getClass(), PositionType);
         assertEquals(productTester.getName(), "Product tester");
-        assertEquals(productTester.getEmployer(), "ACME");
-//System.out.println(productTester.getName().getClass().toString());
-        assertEquals("class java.lang.String", productTester.getName().getClass().toString());
-//        assertTrue(productTester.getName().getClass() == Job.getName().getClass());
-//        assertEquals(productTester.getName().getClass(), Class String);
-//        assertTrue(productTester.getName().getClass().getName() == String);
+        assertTrue(productTester.getEmployer() instanceof Employer);
+        assertEquals(productTester.getEmployer().getValue(), "ACME");
+        assertTrue(productTester.getLocation() instanceof Location);
+        assertEquals(productTester.getLocation().getValue(), "Desert");
+        assertTrue(productTester.getPositionType() instanceof PositionType);
+        assertEquals(productTester.getPositionType().getValue(), "Quality control");
+        assertTrue(productTester.getCoreCompetency() instanceof CoreCompetency);
+        assertEquals(productTester.getCoreCompetency().getValue(), "Persistence");
+//        assertEquals("class java.lang.String", productTester.getName().getClass().toString());
+    }
 
-
+    @Test
+    public void testJobsForEquality() {
+        Job firstIdenticalJob = new Job("Fart sniffer", new Employer("My butt"), new Location ("Still my butt"), new PositionType("Posterior Specialist"), new CoreCompetency("Open-mindedness"));
+        Job secondIdenticalJob = new Job("Fart sniffer", new Employer("My butt"), new Location ("Still my butt"), new PositionType("Posterior Specialist"), new CoreCompetency("Open-mindedness"));
+//        assertNotEquals(firstIdenticalJob, secondIdenticalJob);
+        assertFalse(firstIdenticalJob.equals(secondIdenticalJob));
     }
 
 
