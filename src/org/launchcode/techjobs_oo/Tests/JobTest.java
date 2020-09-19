@@ -88,7 +88,7 @@ public class JobTest {
 //        System.out.println(stringJob.toString().toCharArray());
 //        System.out.println(stringJob.toString().toCharArray()[0]);
 //        System.out.println("thisisastring".toCharArray()[2]);
-        System.out.println(stringJob.toString());
+//        System.out.println(stringJob.toString());
         assertEquals(stringJob.toString().toCharArray()[0], "\n".toCharArray()[0]);
         assertEquals(stringJob.toString().toCharArray()[(stringJob.toString().toCharArray().length)-1], "\n".toCharArray()[0]);
         //should have a label for each field
@@ -111,8 +111,8 @@ public class JobTest {
         assertEquals(colonSpaceCounter, 6);
         // should add "Data not available" if field is empty
         Job missingDataJob = new Job("Item Misplacer", new Employer("Me again"), new Location("Lost"), new PositionType("Middle Manager"), new CoreCompetency());
-//        assertTrue(missingDataJob.toString().contains("Data not available"));
-        System.out.println(missingDataJob.toString());
+        assertTrue(missingDataJob.toString().contains("Data not available"));
+//        System.out.println(missingDataJob.toString());
 //        System.out.println(missingDataJob.getCoreCompetency());
     }
 
