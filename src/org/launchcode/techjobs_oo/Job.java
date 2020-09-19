@@ -31,31 +31,31 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-    public Job(String name, Employer employer, Location location, PositionType positionType) {
-        this();
-        this.name = name;
-        this.employer = employer;
-        this.location = location;
-        this.positionType = positionType;
-    }
+//    public Job(String name, Employer employer, Location location, PositionType positionType) {
+//        this();
+//        this.name = name;
+//        this.employer = employer;
+//        this.location = location;
+//        this.positionType = positionType;
+//    }
 
-    public Job(String name, Employer employer, Location location) {
-        this();
-        this.name = name;
-        this.employer = employer;
-        this.location = location;
-    }
+//    public Job(String name, Employer employer, Location location) {
+//        this();
+//        this.name = name;
+//        this.employer = employer;
+//        this.location = location;
+//    }
+//
+//    public Job(String name, Employer employer) {
+//        this();
+//        this.name = name;
+//        this.employer = employer;
+//    }
 
-    public Job(String name, Employer employer) {
-        this();
-        this.name = name;
-        this.employer = employer;
-    }
-
-    public Job(String name) {
-        this();
-        this.name = name;
-    }
+//    public Job(String name) {
+//        this();
+//        this.name = name;
+//    }
 
 
 

@@ -110,9 +110,9 @@ public class JobTest {
         assertEquals(breakCounter, 7);
         assertEquals(colonSpaceCounter, 6);
         // should add "Data not available" if field is empty
-        Job missingDataJob = new Job("Item Misplacer", new Employer("Me again"), new Location("Lost"), new PositionType("Middle Manager"));
+        Job missingDataJob = new Job("Item Misplacer", new Employer("Me again"), new Location("Lost"), new PositionType("Middle Manager"), new CoreCompetency());
 //        assertTrue(missingDataJob.toString().contains("Data not available"));
-//        System.out.println(missingDataJob.toString());
+        System.out.println(missingDataJob.toString());
 //        System.out.println(missingDataJob.getCoreCompetency());
     }
 
