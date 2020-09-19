@@ -112,7 +112,8 @@ public class JobTest {
         // should add "Data not available" if field is empty
         Job missingDataJob = new Job("Item Misplacer", new Employer("Me again"), new Location("Lost"), new PositionType("Middle Manager"));
 //        assertTrue(missingDataJob.toString().contains("Data not available"));
-        System.out.println(missingDataJob);
+//        System.out.println(missingDataJob.toString());
+//        System.out.println(missingDataJob.getCoreCompetency());
     }
 
 }
