@@ -31,32 +31,6 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-//    public Job(String name, Employer employer, Location location, PositionType positionType) {
-//        this();
-//        this.name = name;
-//        this.employer = employer;
-//        this.location = location;
-//        this.positionType = positionType;
-//    }
-
-//    public Job(String name, Employer employer, Location location) {
-//        this();
-//        this.name = name;
-//        this.employer = employer;
-//        this.location = location;
-//    }
-//
-//    public Job(String name, Employer employer) {
-//        this();
-//        this.name = name;
-//        this.employer = employer;
-//    }
-
-//    public Job(String name) {
-//        this();
-//        this.name = name;
-//    }
-
 
 
     // Custom toString for Job class
@@ -69,14 +43,6 @@ public class Job {
                 "Location: " + this.location.toString() + "\n" +
                 "Position Type: " + this.positionType.toString() + "\n" +
                 "Core Competency: " + this.coreCompetency.toString() +
-//                "Employer: " + if(this.employer.checkNull()) {
-//                    + "Data not available"
-//                        }else{
-//                    + this.employer + "\n" +
-////                "Employer: " +this.employer +"\n" + this.employer.checkNull() +
-////                "Location: " +this.location+"\n" + this.location.checkNull() +
-////                "Position Type: " +this.positionType+"\n" + this.positionType.checkNull() +
-////                "Core Competency: " + this.coreCompetency+ this.coreCompetency.checkNull() +
                 "\n";
     }
 

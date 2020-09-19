@@ -13,29 +13,16 @@ import static org.junit.Assert.*;
 
 public class JobTest {
 
-    @Test
-    public void emptyTest() {
-        assertEquals(10, 10, .001);
-    }
-
     @Before
-    public void createTestObject1() {
-//        Employer boeing = new Employer("Boeing");
-//        Location stLouis = new Location("St. Louis");
-//        CoreCompetency busyWork = new CoreCompetency("Busy Work");
-//        PositionType workerBee = new PositionType("Worker Bee");
-//        Job firstTestJob = new Job("Thing Doer II", boeing, stLouis, workerBee, busyWork);
-    }
+//    public void createTestObject1() {
+//        // I'm genuinely curious why my Before never worked but it hardly really matters
+////        Employer boeing = new Employer("Boeing");
+////        Location stLouis = new Location("St. Louis");
+////        CoreCompetency busyWork = new CoreCompetency("Busy Work");
+////        PositionType workerBee = new PositionType("Worker Bee");
+////        Job firstTestJob = new Job("Thing Doer II", boeing, stLouis, workerBee, busyWork);
+//    }
 
-    @Before
-    public void createTestObject2() {
-//        Employer monsanto = new Employer("Bayer");
-//        Location chicago = new Location("Chicago");
-//        CoreCompetency projectManagement = new CoreCompetency("Project Management");
-//        PositionType projectManager = new PositionType("Project Manager");
-//        Job testJob2 = new Job("Project Manager III", monsanto, chicago, projectManager, projectManagement);
-//        return testJob2;
-    }
 
     @Test
     public void testSettingJobId(){
@@ -70,7 +57,7 @@ public class JobTest {
         assertEquals(productTester.getPositionType().getValue(), "Quality control");
         assertTrue(productTester.getCoreCompetency() instanceof CoreCompetency);
         assertEquals(productTester.getCoreCompetency().getValue(), "Persistence");
-//        assertEquals("class java.lang.String", productTester.getName().getClass().toString());
+
     }
 
     @Test
@@ -85,10 +72,6 @@ public class JobTest {
     public void testToString(){
         //should return a string that contains a blank line before and after the job information
         Job stringJob = new Job("String Attacker", new Employer( "Me"), new Location("My office"), new PositionType("Cat"), new CoreCompetency("Clawing"));
-//        System.out.println(stringJob.toString().toCharArray());
-//        System.out.println(stringJob.toString().toCharArray()[0]);
-//        System.out.println("thisisastring".toCharArray()[2]);
-//        System.out.println(stringJob.toString());
         assertEquals(stringJob.toString().toCharArray()[0], "\n".toCharArray()[0]);
         assertEquals(stringJob.toString().toCharArray()[(stringJob.toString().toCharArray().length)-1], "\n".toCharArray()[0]);
         //should have a label for each field
@@ -112,8 +95,7 @@ public class JobTest {
         // should add "Data not available" if field is empty
         Job missingDataJob = new Job("Item Misplacer", new Employer("Me again"), new Location("Lost"), new PositionType("Middle Manager"), new CoreCompetency());
         assertTrue(missingDataJob.toString().contains("Data not available"));
-//        System.out.println(missingDataJob.toString());
-//        System.out.println(missingDataJob.getCoreCompetency());
+
     }
 
 }
