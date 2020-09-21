@@ -16,11 +16,11 @@ public class JobTest {
     @Before
 //    public void createTestObject1() {
 //        // I'm genuinely curious why my Before never worked but it hardly really matters
-////        Employer boeing = new Employer("Boeing");
-////        Location stLouis = new Location("St. Louis");
-////        CoreCompetency busyWork = new CoreCompetency("Busy Work");
-////        PositionType workerBee = new PositionType("Worker Bee");
-////        Job firstTestJob = new Job("Thing Doer II", boeing, stLouis, workerBee, busyWork);
+//        Employer boeing = new Employer("Boeing");
+//        Location stLouis = new Location("St. Louis");
+//        CoreCompetency busyWork = new CoreCompetency("Busy Work");
+//        PositionType workerBee = new PositionType("Worker Bee");
+//        Job firstTestJob = new Job("Thing Doer II", boeing, stLouis, workerBee, busyWork);
 //    }
 
 
@@ -43,6 +43,8 @@ public class JobTest {
         assertNotEquals(emptyConstructorTestJob.getId(), null);
         assertNotEquals(firstTestJob.getId(), secondTestJob.getId());
         assertEquals(firstTestJob.getId() + 1, secondTestJob.getId(), 0.01);
+        //instead, check that firstTestJob ID is definitely 1, and that secondTestJob is definitely 2
+        //assumes jobID value actually matters
     }
 
     @Test
